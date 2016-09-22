@@ -1,12 +1,11 @@
 const recursion = {};
 
-recursion.chirp = function(number) {
+recursion.repeatIt = function(number, repeatedThing) {
 
 	if(number === 1) {
-		return 'chirp';
+		return repeatedThing;
 	}
-
-	return 'chirp ' + this.chirp(--number);
+	return repeatedThing + ' ' + this.repeatIt(--number, repeatedThing);
 }
 
 module.exports = recursion;
